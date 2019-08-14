@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20160906_U8VvfHtCOLA.info.json.vo.* \
+    20160906_U8VvfHtCOLA.info.json.ao.* \
+    20160906_U8VvfHtCOLA.info.json.bo.* \
+    20160906_U8VvfHtCOLA.info.json.wav 
+
+rm -fr               20160906_U8VvfHtCOLA.info_dir
+mkdir -p             20160906_U8VvfHtCOLA.info_dir
+mv 20160906_U8VvfHtCOLA.info.json 20160906_U8VvfHtCOLA.info.json.*         20160906_U8VvfHtCOLA.info_dir/
+
+
+
+mv  20160906_U8VvfHtCOLA.info_dir/20160906_U8VvfHtCOLA.info.json.jpg 20160906_U8VvfHtCOLA.info_dir/20160906_U8VvfHtCOLA.info.json.mp4.jpg
+
+cat > 20160906_U8VvfHtCOLA.info_dir/_index.md << EOF3
++++
+title = " 20160906_U8VvfHtCOLA 平论｜电信诈骗在中国为何如此猖獗 2016-09-06 "
+description = " 从徐玉玉等三位大学新生被骗惨死到清华老师被骗1760万巨款，电信诈骗为何在中国如此猖獗？欢迎收到本期平论。 "
+weight = 20
++++
+
+{{< mymp4 mp4="20160906_U8VvfHtCOLA.info.json.mp4" 
+text="len $(cat 20160906_U8VvfHtCOLA.info_dir/20160906_U8VvfHtCOLA.info.json.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20160906_U8VvfHtCOLA.info.json.25k.mp4"
+text="len $(cat 20160906_U8VvfHtCOLA.info_dir/20160906_U8VvfHtCOLA.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="从徐玉玉等三位大学新生被骗惨死到清华老师被骗1760万巨款，电信诈骗为何在中国如此猖獗？欢迎收到本期平论。" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=U8VvfHtCOLA" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
