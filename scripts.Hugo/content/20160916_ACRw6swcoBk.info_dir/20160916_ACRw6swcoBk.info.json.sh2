@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20160916_ACRw6swcoBk.info.json.vo.* \
+    20160916_ACRw6swcoBk.info.json.ao.* \
+    20160916_ACRw6swcoBk.info.json.bo.* \
+    20160916_ACRw6swcoBk.info.json.wav 
+
+rm -fr               20160916_ACRw6swcoBk.info_dir
+mkdir -p             20160916_ACRw6swcoBk.info_dir
+mv 20160916_ACRw6swcoBk.info.json 20160916_ACRw6swcoBk.info.json.*         20160916_ACRw6swcoBk.info_dir/
+
+
+
+mv  20160916_ACRw6swcoBk.info_dir/20160916_ACRw6swcoBk.info.json.jpg 20160916_ACRw6swcoBk.info_dir/20160916_ACRw6swcoBk.info.json.webm.mp4.jpg
+
+cat > 20160916_ACRw6swcoBk.info_dir/_index.md << EOF3
++++
+title = " 20160916_ACRw6swcoBk 平论｜中国楼市暴涨背后的阴谋  2016-09-16 "
+description = " 2016年，北上广深一线楼市继续疯狂上涨，令人目瞪口呆，甚至有上海市民排队离婚去抢房，中国楼市暴涨的背后，有你看不懂的阴谋吗？秦伟平《中国危机路线图》已经出版，楼市未来走势如何？与中国危机何种关联？欢迎通过Google Play试阅/购买。https://play.google.com/store/books/details?id=IzwKDQAAQBAJ "
+weight = 20
++++
+
+{{< mymp4 mp4="20160916_ACRw6swcoBk.info.json.webm.mp4" 
+text="len $(cat 20160916_ACRw6swcoBk.info_dir/20160916_ACRw6swcoBk.info.json.webm.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20160916_ACRw6swcoBk.info.json.25k.mp4"
+text="len $(cat 20160916_ACRw6swcoBk.info_dir/20160916_ACRw6swcoBk.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="2016年，北上广深一线楼市继续疯狂上涨，令人目瞪口呆，甚至有上海市民排队离婚去抢房，中国楼市暴涨的背后，有你看不懂的阴谋吗？秦伟平《中国危机路线图》已经出版，楼市未来走势如何？与中国危机何种关联？欢迎通过Google Play试阅/购买。https://play.google.com/store/books/details?id=IzwKDQAAQBAJ" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=ACRw6swcoBk" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
